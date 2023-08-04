@@ -1,0 +1,36 @@
+﻿* {
+    font-family: 'VT323', monospace;
+
+    --main-background-color: gray;
+    --primary-color: blue;
+    --secondary-color: blue;
+    --accent-color: teal;
+    --text-color: white;
+    --link-color: blue;
+    --link-color-visited: purple;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--text-color);
+}
+
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-color-visited);
+}
+.tool {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+}
+
+.tool:nth-child(1) { background-color: green;}
+.tool:nth-child(2) { background-color: blue;}
+.tool:nth-child(2) { background-color: yellow;}
+.tool:nth-child(3) { background-color: red;}
+.tool:nth-child(4) { background-color: teal;}
+
