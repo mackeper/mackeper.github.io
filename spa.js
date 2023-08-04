@@ -5290,7 +5290,12 @@ var $author$project$Main$GamesCS = function (a) {
 var $author$project$Main$GamesCSMsg = function (a) {
 	return {$: 'GamesCSMsg', a: a};
 };
-var $author$project$Main$Home = {$: 'Home'};
+var $author$project$Main$Home = function (a) {
+	return {$: 'Home', a: a};
+};
+var $author$project$Main$HomeMsg = function (a) {
+	return {$: 'HomeMsg', a: a};
+};
 var $author$project$Main$UsernameGenerator = function (a) {
 	return {$: 'UsernameGenerator', a: a};
 };
@@ -5309,39 +5314,62 @@ var $author$project$Pages$About$About$init = _Utils_Tuple2(
 var $author$project$Pages$Blog$Blog$Model = function (posts) {
 	return {posts: posts};
 };
-var $author$project$Pages$Blog$Blog$Post = F3(
-	function (id, title, text) {
-		return {id: id, text: text, title: title};
-	});
+var $author$project$Pages$Blog$Blog$sampleEntry1 = {content: 'In this blog post, we dive into the world of functional programming with Elm, a powerful language for building robust and reliable web applications.\n\n' + ('We\'ll explore the key concepts of functional programming, understand how Elm enforces immutability, and build a simple interactive application.\n\n' + 'If you\'re curious about the benefits of functional programming and want to see how Elm can make your frontend development more elegant, this post is for you!'), date: 'July 15, 2031', id: 1, title: 'Exploring Functional Programming with Elm'};
+var $author$project$Pages$Blog$Blog$sampleEntry2 = {content: 'Calling all gamers! In this blog post, we\'ll delve into the intricacies of game strategy—what it takes to excel in competitive games and how to develop a winning mindset.\n\n' + ('From analyzing game mechanics to anticipating opponent moves, we\'ll cover strategies that can be applied across various game genres. Whether you\'re a casual player or an aspiring esports champion, there\'s something here for you.\n\n' + 'Get ready to level up your gaming skills and dominate the virtual arena!'), date: 'June 23, 2031', id: 2, title: 'Mastering the Art of Game Strategy'};
+var $author$project$Pages$Blog$Blog$sampleEntry3 = {content: 'Join me in this coding adventure as we create a dynamic weather app using Elm. We\'ll fetch data from an API, manage state effectively, and craft a user-friendly interface.\n\n' + ('Through this step-by-step tutorial, you\'ll learn the essentials of Elm programming, explore the Elm architecture, and gain insights into building real-world applications.\n\n' + 'Whether you\'re new to Elm or looking to enhance your frontend development skills, this project will provide valuable hands-on experience.'), date: 'May 8, 2031', id: 3, title: 'Coding Adventures: Building a Weather App with Elm'};
+var $author$project$Pages$Blog$Blog$sampleEntry4 = {content: 'From console applications to full-stack web development, my career as a C# developer has been a thrilling ride. I\'ve engineered solutions that power businesses, create seamless user experiences, and push the boundaries of technology. Join me in this blog post as I reflect on my growth, the challenges I\'ve conquered, and the exciting projects that lie ahead.', date: 'September 5, 2031', id: 4, title: 'Journey as a C# Developer'};
+var $author$project$Pages$Blog$Blog$sampleEntry5 = {content: 'In the realm of Counter-Strike: Global Offensive, I\'ve evolved from a novice to a strategic powerhouse. Join me in this blog post as I recount exhilarating moments, clutch plays, and the camaraderie that makes competitive gaming an unforgettable experience. Whether you\'re a fellow player or curious about the world of esports, you\'re in for an action-packed read.', date: 'August 20, 2031', id: 5, title: 'CS:GO Chronicles: A Tale of Triumph and Teamwork'};
+var $author$project$Pages$Blog$Blog$sampleEntry6 = {content: 'A soft purr, a gentle nudge—my cats are my companions on this journey called life. In this heartfelt blog entry, I\'ll share anecdotes of their antics, the unconditional love they offer, and how they\'ve enriched my world in the most unexpected ways. If you\'re a fellow feline enthusiast or simply adore heartwarming stories, this one\'s for you.', date: 'July 3, 2031', id: 6, title: 'Of Whiskers and Wonders: Ode to My Cats'};
+var $author$project$Pages$Blog$Blog$sampleEntry7 = {content: 'Did you know that some turtles can live longer than humans? In this quirky blog post, we\'ll unravel fascinating facts about these ancient creatures. From their intriguing habitats to their remarkable longevity, turtles are a testament to the marvels of the natural world. Whether you\'re a biology enthusiast or just love quirky trivia, dive into the world of turtles with me!', date: 'June 10, 2031', id: 7, title: 'Turtles: Unveiling the Mysteries of the Shelled Wonders'};
+var $author$project$Pages$Blog$Blog$sampleEntry8 = {content: 'Music is the backdrop to life\'s adventures, and I\'ve curated a playlist that spans genres and emotions. Whether you\'re seeking inspiration, relaxation, or a beat to dance to, this eclectic mix has you covered. From soul-soothing melodies to energetic beats, I invite you to explore the soundscape that accompanies my daily journey. Let the music play!', date: 'May 1, 2031', id: 8, title: 'Melodic Escapes: A Playlist for Every Mood'};
 var $author$project$Pages$Blog$Blog$init = _Utils_Tuple2(
 	$author$project$Pages$Blog$Blog$Model(
 		_List_fromArray(
-			[
-				A3($author$project$Pages$Blog$Blog$Post, 0, 'Day 1', 'Wrote an website in elm'),
-				A3($author$project$Pages$Blog$Blog$Post, 1, 'Day 2', 'Hmm...')
-			])),
+			[$author$project$Pages$Blog$Blog$sampleEntry1, $author$project$Pages$Blog$Blog$sampleEntry2, $author$project$Pages$Blog$Blog$sampleEntry3, $author$project$Pages$Blog$Blog$sampleEntry4, $author$project$Pages$Blog$Blog$sampleEntry5, $author$project$Pages$Blog$Blog$sampleEntry6, $author$project$Pages$Blog$Blog$sampleEntry7, $author$project$Pages$Blog$Blog$sampleEntry8])),
 	$elm$core$Platform$Cmd$none);
-var $author$project$Pages$Dev$Tools$Tools$Model = function (posts) {
-	return {posts: posts};
+var $author$project$Pages$Dev$Tools$Tools$Model = function (tools) {
+	return {tools: tools};
 };
-var $author$project$Pages$Dev$Tools$Tools$Tool = F3(
-	function (id, title, text) {
-		return {id: id, text: text, title: title};
-	});
+var $author$project$Pages$Dev$Tools$Tools$sampleTools = _List_fromArray(
+	[
+		{id: 1, text: 'A runtime environment that allows running JavaScript on the server, enabling powerful backend development.', title: 'Node.js'},
+		{id: 2, text: 'A minimal and flexible Node.js web application framework that simplifies building APIs and web applications.', title: 'Express.js'},
+		{id: 3, text: 'A high-level Python web framework that encourages rapid development, clean design, and pragmatic programming.', title: 'Django'},
+		{id: 4, text: 'A lightweight Python web framework that focuses on simplicity and flexibility, perfect for small to medium-sized applications.', title: 'Flask'},
+		{id: 5, text: 'A web application framework written in Ruby that emphasizes convention over configuration and follows the MVC pattern.', title: 'Ruby on Rails'},
+		{id: 6, text: 'A framework for building Java applications that simplifies the development of production-ready applications with minimal setup.', title: 'Spring Boot'},
+		{id: 7, text: 'A PHP web application framework known for its elegant syntax, expressive design, and robust features.', title: 'Laravel'},
+		{id: 8, text: 'A cross-platform, high-performance framework for building modern, cloud-based, and internet-connected applications.', title: 'ASP.NET Core'},
+		{id: 9, text: 'A modern, fast, web framework for building APIs with Python 3.7+ based on standard Python type hints.', title: 'FastAPI'},
+		{id: 10, text: 'A powerful, open-source relational database system known for its extensibility, stability, and strong support for SQL.', title: 'PostgreSQL'},
+		{id: 11, text: 'A NoSQL database that provides scalability and flexibility for managing unstructured and semi-structured data.', title: 'MongoDB'},
+		{id: 12, text: 'An in-memory data store that accelerates data access and caching for high-performance applications.', title: 'Redis'},
+		{id: 13, text: 'A query language for APIs that provides a more efficient, flexible, and organized approach to data fetching.', title: 'GraphQL'},
+		{id: 14, text: 'A platform for developing, shipping, and running applications using containerization for consistent and isolated environments.', title: 'Docker'},
+		{id: 15, text: 'An open-source container orchestration platform for automating deployment, scaling, and management of applications.', title: 'Kubernetes'},
+		{id: 16, text: 'An open-source automation server that helps automate building, testing, and deploying applications.', title: 'Jenkins'},
+		{id: 17, text: 'A distributed, RESTful search and analytics engine designed for horizontal scalability, reliability, and real-time search capabilities.', title: 'Elasticsearch'},
+		{id: 18, text: 'An open-source message broker that facilitates communication between various services and applications.', title: 'RabbitMQ'},
+		{id: 19, text: 'A query language for APIs that provides a more efficient, flexible, and organized approach to data fetching.', title: 'GraphQL'},
+		{id: 20, text: 'An open-source monitoring and alerting toolkit designed for reliability and scalability in dynamic environments.', title: 'Prometheus'}
+	]);
 var $author$project$Pages$Dev$Tools$Tools$init = _Utils_Tuple2(
-	$author$project$Pages$Dev$Tools$Tools$Model(
-		_List_fromArray(
-			[
-				A3($author$project$Pages$Dev$Tools$Tools$Tool, 0, 'Day 1', 'Wrote an website in elm'),
-				A3($author$project$Pages$Dev$Tools$Tools$Tool, 1, 'Day 2', 'Hmm...')
-			])),
+	$author$project$Pages$Dev$Tools$Tools$Model($author$project$Pages$Dev$Tools$Tools$sampleTools),
 	$elm$core$Platform$Cmd$none);
 var $author$project$Pages$Games$CS$CS$Model = F2(
 	function (text1, text2) {
 		return {text1: text1, text2: text2};
 	});
+var $author$project$Pages$Games$CS$Autoexec$getConfig = '// Visual\n\n    fps_max "400";\n\n    hud_showtargetid "1";\n    viewmodel_presetpos "1";\n    cl_righthand "1";\n    mat_monitorgamma "2.200000";\n    mat_monitorgamma_tv_enabled "0";\n\n    // Radar\n    cl_drawhud_force_radar "0";\n    cl_radar_scale "0.4";\n    cl_radar_rotate "0";\n    cl_radar_always_centered "0";\n    cl_radar_icon_scale_min "0.8";\n    \n    // Mouse\n    m_rawinput "1";\n    sensitivity "0.9";\n    zoom_sensitivity_ratio_mouse "0.82";\n    \n    // Crosshair\n    cl_crosshair_drawoutline "1";\n    cl_crosshair_outlinethickness "0.1";\n    cl_crosshairthickness "0";\n    cl_crosshairdot "0";\n    cl_crosshairgap "0";\n    cl_crosshairgap_useweaponvalue "0";\n    cl_crosshairsize "1.2";\n    cl_crosshairstyle "4";\n    cl_crosshairusealpha "1";\n    cl_crosshairalpha "255";\n    cl_crosshaircolor "1";\n    \n    // Sound\n    snd_deathcamera_volume "0.0";\n    snd_mapobjective_volume "0.0";\n    snd_menumusic_volume "0.0";\n    snd_mute_losefocus "0";\n    snd_roundend_volume "0";\n    snd_roundstart_volume "0";\n    snd_tensecondwarning_volume "0.3";\n    \n    // Gameplay\n    cl_autowepswitch "0";\n    r_drawtracers_firstperson "1";\n    gameinstructor_enable "0";\n    cl_autohelp "0";\n    cl_showhelp "0";\n    \n    // Bindings\n    bind "f" "use weapon_knife;use weapon_flashbang";\n    bind "c" "use weapon_knife;use weapon_smokegrenade";\n    bind "x" "use weapon_knife;use weapon_molotov;use weapon_incgrenade";\n    bind "z" "player_ping";\n    bind "MWHEELDOWN" "+jump";\n    bind "n" "-attack";\n    bind "Backspace" "+jump;-attack;";\n    bindtoggle "MWHEELUP" "cl_righthand";\n    bind "v" "+voicerecord";\n    bind "MOUSE5" "r_cleardecals";\n    bind "[" toggleconsole;\n    bind "q" "+lookatweapon;r_cleardecals";\n    ';
 var $author$project$Pages$Games$CS$CS$init = _Utils_Tuple2(
-	A2($author$project$Pages$Games$CS$CS$Model, 'Hello', 'World'),
+	A2($author$project$Pages$Games$CS$CS$Model, $author$project$Pages$Games$CS$Autoexec$getConfig, 'World'),
+	$elm$core$Platform$Cmd$none);
+var $author$project$Pages$Home$Home$Model = F2(
+	function (text1, text2) {
+		return {text1: text1, text2: text2};
+	});
+var $author$project$Pages$Home$Home$init = _Utils_Tuple2(
+	A2($author$project$Pages$Home$Home$Model, 'Hello', 'Home'),
 	$elm$core$Platform$Cmd$none);
 var $author$project$Pages$UsernameGenerator$UsernameGenerator$GetNewSeed = function (a) {
 	return {$: 'GetNewSeed', a: a};
@@ -5541,7 +5569,7 @@ var $author$project$Main$initCurrentPage = function (_v0) {
 			case 'NotFound':
 				return _Utils_Tuple2($author$project$Main$NotFound, $elm$core$Platform$Cmd$none);
 			case 'Home':
-				return _Utils_Tuple2($author$project$Main$Home, $elm$core$Platform$Cmd$none);
+				return A3($author$project$Main$initTo, $author$project$Main$Home, $author$project$Main$HomeMsg, $author$project$Pages$Home$Home$init);
 			case 'UsernameGenerator':
 				return A3($author$project$Main$initTo, $author$project$Main$UsernameGenerator, $author$project$Main$UsernameGeneratorMsg, $author$project$Pages$UsernameGenerator$UsernameGenerator$init);
 			case 'About':
@@ -6370,6 +6398,7 @@ var $author$project$Main$init = F3(
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $author$project$Main$subscriptions = function (model) {
+	var _v0 = model.page;
 	return $elm$core$Platform$Sub$none;
 };
 var $elm$browser$Browser$Navigation$load = _Browser_load;
@@ -6443,6 +6472,14 @@ var $author$project$Pages$Dev$Tools$Tools$update = F2(
 		}
 	});
 var $author$project$Pages$Games$CS$CS$update = F2(
+	function (msg, model) {
+		if (msg.$ === 'Msg1') {
+			return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+		} else {
+			return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+		}
+	});
+var $author$project$Pages$Home$Home$update = F2(
 	function (msg, model) {
 		if (msg.$ === 'Msg1') {
 			return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
@@ -6769,7 +6806,7 @@ var $author$project$Main$updateTo = F4(
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		var _v0 = _Utils_Tuple2(msg, model.page);
-		_v0$7:
+		_v0$8:
 		while (true) {
 			switch (_v0.a.$) {
 				case 'UrlRequested':
@@ -6810,7 +6847,7 @@ var $author$project$Main$update = F2(
 							$author$project$Main$UsernameGeneratorMsg,
 							A2($author$project$Pages$UsernameGenerator$UsernameGenerator$update, subMsg, pageModel));
 					} else {
-						break _v0$7;
+						break _v0$8;
 					}
 				case 'AboutMsg':
 					if (_v0.b.$ === 'About') {
@@ -6823,7 +6860,7 @@ var $author$project$Main$update = F2(
 							$author$project$Main$AboutMsg,
 							A2($author$project$Pages$About$About$update, subMsg, pageModel));
 					} else {
-						break _v0$7;
+						break _v0$8;
 					}
 				case 'BlogMsg':
 					if (_v0.b.$ === 'Blog') {
@@ -6836,7 +6873,20 @@ var $author$project$Main$update = F2(
 							$author$project$Main$BlogMsg,
 							A2($author$project$Pages$Blog$Blog$update, subMsg, pageModel));
 					} else {
-						break _v0$7;
+						break _v0$8;
+					}
+				case 'HomeMsg':
+					if (_v0.b.$ === 'Home') {
+						var subMsg = _v0.a.a;
+						var pageModel = _v0.b.a;
+						return A4(
+							$author$project$Main$updateTo,
+							model,
+							$author$project$Main$Home,
+							$author$project$Main$HomeMsg,
+							A2($author$project$Pages$Home$Home$update, subMsg, pageModel));
+					} else {
+						break _v0$8;
 					}
 				case 'DevToolsMsg':
 					if (_v0.b.$ === 'DevTools') {
@@ -6849,7 +6899,7 @@ var $author$project$Main$update = F2(
 							$author$project$Main$DevToolsMsg,
 							A2($author$project$Pages$Dev$Tools$Tools$update, subMsg, pageModel));
 					} else {
-						break _v0$7;
+						break _v0$8;
 					}
 				default:
 					if (_v0.b.$ === 'GamesCS') {
@@ -6862,18 +6912,12 @@ var $author$project$Main$update = F2(
 							$author$project$Main$GamesCSMsg,
 							A2($author$project$Pages$Games$CS$CS$update, subMsg, pageModel));
 					} else {
-						break _v0$7;
+						break _v0$8;
 					}
 			}
 		}
 		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 	});
-var $elm$html$Html$b = _VirtualDom_node('b');
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -6882,6 +6926,11 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			key,
 			$elm$json$Json$Encode$string(string));
 	});
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$nav = _VirtualDom_node('nav');
+var $elm$html$Html$ul = _VirtualDom_node('ul');
+var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -6889,6 +6938,8 @@ var $elm$html$Html$Attributes$href = function (url) {
 		_VirtualDom_noJavaScriptUri(url));
 };
 var $elm$html$Html$li = _VirtualDom_node('li');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $author$project$Main$viewLink = function (path) {
 	return A2(
 		$elm$html$Html$li,
@@ -6909,47 +6960,118 @@ var $author$project$Main$viewLink = function (path) {
 };
 var $elm$virtual_dom$VirtualDom$map = _VirtualDom_map;
 var $elm$html$Html$map = $elm$virtual_dom$VirtualDom$map;
+var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
+var $elm$html$Html$p = _VirtualDom_node('p');
+var $author$project$Pages$About$About$sectionAboutMe = A2(
+	$elm$html$Html$div,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$class('about-section about-me')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('About Me')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('Hey there! I\'m John Doe, a passionate software engineer with a background in computer science. Ever since I wrote my first \'Hello, World!\' program, I\'ve been captivated by the endless possibilities of technology.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('My journey in the world of programming began during my college days, where I honed my skills in algorithms, data structures, and software design. Over the years, I\'ve delved into various programming languages, from Java and C++ to Python and JavaScript.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('When I\'m not immersed in code, you\'ll often find me exploring the realms of fantasy through role-playing games or challenging my mind with intricate puzzles. I believe in the power of code to shape the future and the magic of stories to enrich our lives.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('Feel free to connect with me on social media. Let\'s embark on this digital adventure together!')
+				]))
+		]));
+var $author$project$Pages$About$About$sectionAboutSite = A2(
+	$elm$html$Html$div,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$class('about-section about-site')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('About the Site')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('Welcome to my digital playground, a testament to my love for technology and design. This website is a fusion of my coding expertise and my creative flair, meticulously crafted to showcase the art of frontend development.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('Built using a combination of Elm, HTML, and CSS, this site reflects my dedication to staying at the forefront of cutting-edge technologies. Elm, with its functional programming paradigm, has enabled me to create a seamless and interactive user experience.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('The site\'s responsive design ensures it looks and feels fantastic on various devices, offering a smooth navigation experience. From the intricate animations to the intuitive user interface, every element has been thoughtfully designed to provide both aesthetic pleasure and functional efficiency.')
+				])),
+			A2(
+			$elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('Behind the scenes, I\'ve utilized my coding prowess to optimize performance, prioritize security, and ensure a seamless deployment process. This site isn\'t just a portfolio—it\'s a living testament to my commitment to innovation and the harmonious blend of technology and creativity.')
+				]))
+		]));
 var $author$project$Pages$About$About$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
 		_List_fromArray(
 			[
-				A2(
-				$elm$html$Html$h1,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text('About')
-					])),
-				A2(
-				$elm$html$Html$div,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text('This site was built with elm.')
-					])),
-				A2(
-				$elm$html$Html$h1,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Auther')
-					])),
-				A2(
-				$elm$html$Html$div,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text('This site was built by Marcus')
-					]))
+				$elm$html$Html$Attributes$class('about-container')
+			]),
+		_List_fromArray(
+			[
+				$author$project$Pages$About$About$sectionAboutMe,
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				$author$project$Pages$About$About$sectionAboutSite
 			]));
 };
-var $author$project$Pages$Blog$Blog$viewPost = function (post) {
+var $author$project$Pages$Blog$Blog$viewEntry = function (entry) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('blog-entry')
+			]),
 		_List_fromArray(
 			[
 				A2(
@@ -6957,27 +7079,36 @@ var $author$project$Pages$Blog$Blog$viewPost = function (post) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text(post.title)
+						$elm$html$Html$text(entry.title)
 					])),
 				A2(
-				$elm$html$Html$div,
+				$elm$html$Html$p,
 				_List_Nil,
 				_List_fromArray(
 					[
-						$elm$html$Html$text(post.text)
+						$elm$html$Html$text(entry.date)
+					])),
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text(entry.content)
 					]))
 			]));
 };
 var $author$project$Pages$Blog$Blog$viewPosts = function (model) {
-	return A2($elm$core$List$map, $author$project$Pages$Blog$Blog$viewPost, model.posts);
+	return A2($elm$core$List$map, $author$project$Pages$Blog$Blog$viewEntry, model.posts);
 };
 var $author$project$Pages$Blog$Blog$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('blog')
+			]),
 		$author$project$Pages$Blog$Blog$viewPosts(model));
 };
-var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $author$project$Pages$Dev$Tools$Tools$viewPost = function (post) {
 	return A2(
 		$elm$html$Html$div,
@@ -7004,7 +7135,7 @@ var $author$project$Pages$Dev$Tools$Tools$viewPost = function (post) {
 			]));
 };
 var $author$project$Pages$Dev$Tools$Tools$viewPosts = function (model) {
-	return A2($elm$core$List$map, $author$project$Pages$Dev$Tools$Tools$viewPost, model.posts);
+	return A2($elm$core$List$map, $author$project$Pages$Dev$Tools$Tools$viewPost, model.tools);
 };
 var $author$project$Pages$Dev$Tools$Tools$view = function (model) {
 	return A2(
@@ -7012,14 +7143,104 @@ var $author$project$Pages$Dev$Tools$Tools$view = function (model) {
 		_List_Nil,
 		$author$project$Pages$Dev$Tools$Tools$viewPosts(model));
 };
+var $elm$html$Html$hr = _VirtualDom_node('hr');
 var $author$project$Pages$Games$CS$CS$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
 		_List_Nil,
 		_List_fromArray(
 			[
-				$elm$html$Html$text(model.text1),
-				$elm$html$Html$text(model.text2)
+				A2(
+				$elm$html$Html$p,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text(model.text1)
+					])),
+				A2($elm$html$Html$hr, _List_Nil, _List_Nil)
+			]));
+};
+var $author$project$Pages$Home$Home$view = function (model) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('home')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('welcome-text')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$h1,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Welcome to my personal website!')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Embark on a journey through my digital realm—a convergence of passions, creativity, and technology. This multifaceted platform serves as a reflection of my diverse interests, all meticulously curated in one virtual space.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('As you navigate through these virtual corridors, you\'ll discover a myriad of captivating features. The heart of this site is my blog—a canvas where thoughts, ideas, and insights come to life. Whether delving into the latest developments in the tech world, sharing experiences from my ventures into various games, or unraveling the intricacies of my coding endeavors, this blog encapsulates my intellectual escapades.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Curious about the mind behind the screen? Don\'t miss the \"About Me\" page, where I unveil the layers that constitute my identity. You\'ll find the fusion of my background, aspirations, and the journey that led me to this digital crossroads.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Speaking of journeys, my corner dedicated to development tools is a testament to my commitment to innovation. Here, you\'ll unearth resources that have been instrumental in shaping my coding odysseys—tools that streamline processes, enhance efficiency, and bring ideas to life with elegance.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('But that\'s not all. For fellow gaming enthusiasts, I\'ve curated an assortment of tools tailored to various games. From guides and strategies to interactive resources, this section adds a new dimension to your gaming escapades.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('At the heart of it all is a passion for pushing the boundaries of frontend design. This site isn\'t just a virtual space; it\'s a testament to the latest trends, an embodiment of captivating aesthetics, and a showcase of what\'s possible when technology meets creativity.')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('So, welcome once again to my digital haven—a testament to the synergy between artistry, innovation, and exploration. Your journey starts now. Explore, learn, and immerse yourself in all that awaits!')
+							])),
+						A2(
+						$elm$html$Html$p,
+						_List_Nil,
+						_List_fromArray(
+							[
+								$elm$html$Html$text('[Your Name]')
+							]))
+					]))
 			]));
 };
 var $author$project$Pages$UsernameGenerator$UsernameGenerator$GenerateUsername = {$: 'GenerateUsername'};
@@ -7099,7 +7320,10 @@ var $author$project$Pages$UsernameGenerator$UsernameGenerator$viewUsernames = fu
 var $author$project$Pages$UsernameGenerator$UsernameGenerator$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('username-generator')
+			]),
 		_List_fromArray(
 			[
 				A2(
@@ -7125,7 +7349,11 @@ var $author$project$Main$viewPage = function (model) {
 		case 'NotFound':
 			return $elm$html$Html$text('Not found');
 		case 'Home':
-			return $elm$html$Html$text('Home');
+			var pageModel = _v0.a;
+			return A2(
+				$elm$html$Html$map,
+				$author$project$Main$HomeMsg,
+				$author$project$Pages$Home$Home$view(pageModel));
 		case 'About':
 			var aboutModel = _v0.a;
 			return A2(
@@ -7162,34 +7390,43 @@ var $author$project$Main$view = function (model) {
 	return {
 		body: _List_fromArray(
 			[
-				$elm$html$Html$text('The current URL is: '),
-				A2(
-				$elm$html$Html$b,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(
-						$elm$url$Url$toString(model.url))
-					])),
-				A2(
-				$elm$html$Html$ul,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$author$project$Main$viewLink('/home'),
-						$author$project$Main$viewLink('/usernamegenerator'),
-						$author$project$Main$viewLink('/games/cs'),
-						$author$project$Main$viewLink('/games/idleon'),
-						$author$project$Main$viewLink('/dev/tools'),
-						$author$project$Main$viewLink('/about'),
-						$author$project$Main$viewLink('/blog')
-					])),
 				A2(
 				$elm$html$Html$div,
-				_List_Nil,
 				_List_fromArray(
 					[
-						$author$project$Main$viewPage(model)
+						$elm$html$Html$Attributes$class('container')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$nav,
+						_List_Nil,
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$ul,
+								_List_Nil,
+								_List_fromArray(
+									[
+										$author$project$Main$viewLink('/home'),
+										$author$project$Main$viewLink('/usernamegenerator'),
+										$author$project$Main$viewLink('/games/cs'),
+										$author$project$Main$viewLink('/games/idleon'),
+										$author$project$Main$viewLink('/dev/tools'),
+										$author$project$Main$viewLink('/about'),
+										$author$project$Main$viewLink('/blog')
+									]))
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('main-content')
+							]),
+						_List_fromArray(
+							[
+								$author$project$Main$viewPage(model)
+							]))
 					]))
 			]),
 		title: 'URL Interceptor'
